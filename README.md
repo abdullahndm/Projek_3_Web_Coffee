@@ -1,2 +1,2 @@
-# Projek_3_Web_Coffee
-Web Coffee
+# Penjualan Coffee Berbasis Website
+Kami menggunakan codeigniter
