@@ -66,21 +66,9 @@ class Login extends CI_Controller
                 $this->session->set_userdata('level', $row->level);
 
                 if ($this->session->userdata('level') == 'admin') {
-                    // redirect('admin/home');
-                    echo "
-                        <script>
-                            alert('Login Success.');
-                            window.location = '" . base_url() . "';
-                        </script>
-                    ";
+                    redirect('admin/home');
                 } else {
-                    // redirect('user/home');
-                    echo "
-                        <script>
-                            alert('Login Success.');
-                            window.location = '" . base_url() . "';
-                        </script>
-                    ";
+                    redirect('user/home');
                 }
             }
         } else {
@@ -89,6 +77,16 @@ class Login extends CI_Controller
         }
     }
 
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        echo "
+                <script>
+                    alert('You are logged out.');
+                    window.location = '" . base_url() . "';
+                </script>
+            ";
+    }
 
 }
 /* End of file Login.php */

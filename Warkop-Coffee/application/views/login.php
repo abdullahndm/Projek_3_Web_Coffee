@@ -1,7 +1,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <b>Warkop</b>Coffee
+            <b>Stars</b>Coffee
         </div>
         <?php if ($this->session->flashdata('pesan') == TRUE) : ?>
             <div class="alert alert-info alert-dismissible">

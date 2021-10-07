@@ -23,7 +23,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="login-logo">
-            <b>Warkop</b>Coffee
+            <b>Stars</b>Coffee
         </div>
 
         <div class="card">
