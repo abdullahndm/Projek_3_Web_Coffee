@@ -14,7 +14,8 @@
         <div class="card mt-3">
           <div class="card-header">
             <h3 class="card-title">Produk</h3>&nbsp;&nbsp;
-            <a href="<?= base_url(); ?>admin/produk/add" class="btn btn-primary align-content-end"><i class="nav-icon fas fa-plus"></i>Tambah</a>
+            <!-- <a href="<?= base_url(); ?>admin/produk/add" class="btn btn-primary align-content-end"><i class="nav-icon fas fa-plus"></i>Tambah</a> -->
+            <a href="#" class="btn btn-primary align-content-end"><i class="nav-icon fas fa-plus"></i>Tambah</a>
           </div>
           <div class="card-body">
             <table id="example1" class="table table-bordered table-striped">
