@@ -36,9 +36,9 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-              <?php foreach ($transaksi as $t) :?>
+              <!-- <?php foreach ($transaksi as $t) :?>
                 <h3><?= $t->trans;?></h3>
-                <?php endforeach;?>
+                <?php endforeach;?> -->
 
                 <p>Transaksi Sukses</p>
               </div>
@@ -70,9 +70,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-              <?php foreach ($pending as $p) :?>
+              <!-- <?php foreach ($pending as $p) :?>
                 <h3><?= $p->trans;?></h3>
-                <?php endforeach;?>
+                <?php endforeach;?> -->
 
                 <p>Transaksi Pending</p>
               </div>
