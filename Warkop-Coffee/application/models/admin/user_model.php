@@ -9,7 +9,7 @@ class user_model extends CI_Model
     {
         return $this->db->get('login')->result_array();
     }
- 
+    
     public function getUserById($username)
     {
         return $this->db->get_where('login', ['username' => $username])->row_array();
