@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2021 at 05:17 PM
+-- Generation Time: Oct 14, 2021 at 05:37 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -46,6 +46,13 @@ CREATE TABLE `kategori` (
   `kategori` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `kategori`) VALUES
+(1, 'Coffee');
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +78,13 @@ CREATE TABLE `login` (
   `nama` text NOT NULL,
   `level` enum('admin','customer') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`, `email`, `nama`, `level`) VALUES
+('admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -101,6 +115,14 @@ CREATE TABLE `produk` (
   `deskripsi` text NOT NULL,
   `img` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama`, `harga`, `stok`, `deskripsi`, `img`) VALUES
+(1, 1, 'Cappuccino', 18000, 55, 'Minuman khas Italia yang dibuat dari espresso dan susu', 'cappuccino2.jpg'),
+(2, 1, 'Espresso', 14000, 40, 'Minuman yang dihasilkan dengan mengekstraksi biji kopi yang sudah digiling dengan menyemburkan air panas di bawah tekanan tinggi.', 'espresso1.jpg');
 
 -- --------------------------------------------------------
 
@@ -167,6 +189,16 @@ ALTER TABLE `produk`
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
   ADD KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
