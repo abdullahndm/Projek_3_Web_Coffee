@@ -8,39 +8,35 @@
                             echo '<div class="alert alert-danger" role="alert">'.validation_errors().'</div>';
                         }
                     ?>
-                    <?= form_open_multipart('admin/user/add') ?>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="" method="post">
                         <div class="card-header">
-                            <h3 class="card-title">Tambah User</h3>
+                            <h3 class="card-title">Add User</h3>
                         </div>
                         <div class="card-body">
+
                             <div class="form-group">
-                                <label for="User">Username</label>
-                                <input type="text" name="user" class="form-control" placeholder="Enter User">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" class="form-control" placeholder="Enter Username">
                             </div>
-                        </div>
-                        <div class="card-body">
                             <div class="form-group">
-                                <label for="User">Password</label>
-                                <input type="text" name="user" class="form-control" placeholder="Enter Password">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter Password">
                             </div>
-                        </div>
-                        <div class="card-body">
                             <div class="form-group">
-                                <label for="User">Email</label>
-                                <input type="text" name="user" class="form-control" placeholder="Enter Email">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter Email">
                             </div>
-                        </div>
-                        <div class="card-body">
                             <div class="form-group">
-                                <label for="User">Nama</label>
-                                <input type="text" name="user" class="form-control" placeholder="Enter Nama">
+                                <label for="nama">Nama</label>
+                                <input type="text" name="nama" class="form-control" placeholder="Enter Nama">
                             </div>
-                        </div>
-                        <div class="card-body">
                             <div class="form-group">
-                                <label for="User">Level</label>
-                                <input type="text" name="user" class="form-control" placeholder="Enter Admin/User">
+                                <label>Level</label>
+                                <select class="form-control select2" style="width: 100%;" name='level'>
+                                <?php foreach ($level as $key) : ?>
+                                    <option value="<?= $key ?>" selected="<?= $key ?>"><?= $key ?></option>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                         <div class="card-footer">
@@ -48,6 +44,7 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
