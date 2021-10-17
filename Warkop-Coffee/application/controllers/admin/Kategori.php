@@ -37,12 +37,14 @@ class Kategori extends CI_Controller
             redirect('admin/kategori', 'refresh');
         }
     }
+
     public function delete($id_kategori)
     {
         $this->kategori->delete($id_kategori);
         $this->session->set_flashdata('flash-data', 'dihapus');
         redirect('admin/kategori', 'refresh');
     }
+    
     public function update($id_kategori)
     {
         $this->form_validation->set_rules('kategori', 'Kategori', 'required');
