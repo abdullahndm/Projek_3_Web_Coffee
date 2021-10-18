@@ -10,13 +10,34 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <label for="id_user">Id User</label>
-                                <input type="hidden" name="id_user" class="form-control" value="<?= $user['username'] ?>">
+                                <label for="username">Username</label>
+                                <input type="hidden" name="username" class="form-control" value="<?= $user['username'] ?>">
                                 <input type="text" disabled class="form-control" value="<?= $user['username'] ?>">
                             </div>
                             <div class="form-group">
-                                <label for="user">User</label>
-                                <input type="text" name="user" class="form-control" value="<?= $user['username'] ?>">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" value="<?= $user['password'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" value="<?= $user['email'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="nama">Nama</label>
+                                <input type="text" name="nama" class="form-control" value="<?= $user['nama'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label>Level</label>
+                                <!-- <?= $user['level'];?> -->
+                                <select class="form-control select2" style="width: 100%;" name='level'>
+                                <?php foreach ($level as $key) : ?>
+                                    <?php if ($key == $user['level']) : ?>
+                                        <option value="<?= $key ?>" selected><?= $key ?></option>
+                                    <?php else : ?>
+                                        <option value="<?= $key ?>"><?= $key ?></option>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                                </select>
                             </div>
                         </div>
                         <div class="card-footer">
