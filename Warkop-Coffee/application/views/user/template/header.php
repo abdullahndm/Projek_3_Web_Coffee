@@ -54,7 +54,7 @@ if (empty($this->session->userdata('username'))) {
                         </div>
                     </li>
                     <!-- <li class="nav-item cart"><a href="<?= base_url(); ?>user/home/cart" class="nav-link"><span class="icon icon-shopping_cart"></span></a></li> -->
-                    <li class="nav-item cart"><a href="#" class="nav-link"><span class="icon icon-shopping_cart"></span></a></li>
+                    <li class="nav-item cart"><a href="<?= base_url(); ?>user/home/cart" class="nav-link"><span class="icon icon-shopping_cart"></span></a></li>
                     <li class="nav-item cart"><a href="<?= base_url(); ?>login/logout" class="nav-link"><span class="icon icon-power-off"></span></a></li>
 
                 </ul>

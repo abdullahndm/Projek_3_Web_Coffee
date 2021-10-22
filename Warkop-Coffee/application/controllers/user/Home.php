@@ -54,7 +54,7 @@ class Home extends CI_Controller
     {
         $data = array(
             'title' => 'Keranjang',
-            // 'keranjang' => $this->home->getUserCart(),
+            'keranjang' => $this->home->getUserCart(),
         );
 
         $this->load->view('user/template/header', $data);
