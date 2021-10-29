@@ -69,7 +69,7 @@ class produk_model extends CI_Model
     }
     public function deleteProduk($id_produk)
     {
-        // $this->_deleteImage($id_produk);
+        $this->_deleteImage($id_produk);
         $this->db->where('id_produk', $id_produk);
         $this->db->delete('produk');
     }
@@ -88,12 +88,12 @@ class produk_model extends CI_Model
             return $return;
         }
     }
-    // private function _deleteImage($id_produk)
-    // {
-    //     $product = $this->getProdukbyid($id_produk);
-    //     $filename = $product['img'];
-    //     unlink(FCPATH . "uploads/produk/" . $filename);
-    // }
+    private function _deleteImage($id_produk)
+    {
+        $product = $this->getProdukbyid($id_produk);
+        $filename = $product['img'];
+        unlink(FCPATH . "uploads/produk/" . $filename);
+    }
     public function getprod()
     {
         $this->db->select('count(id_produk) pro');

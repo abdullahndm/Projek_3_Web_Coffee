@@ -40,28 +40,28 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <span class="subheading">Hanya untuk Anda</span>
+                <span class="subheading">Hanya untuk Anda</span><hr>
                 <h2 class="mb-4">Kopi yang Paling Banyak Diminati</h2>
                 <p>Jangan Sampai Kehabisan stok untuk Kopi yang Sedang ng-tren</p>
             </div>
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
             <?php foreach ($bestseller as $bs) : ?>
                 <div class="col-md-3">
                     <div class="menu-entry">
 
-                        <a href="#" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $bs->img ?>);"></a>
+                        <a href="<?= base_url(); ?>home/detail/<?= $bs->id_produk ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $bs->img ?>);"></a>
                         <div class="text text-center pt-4">
                             <h3><a href="#"><?= $bs->nama ?></a></h3>
                             <p class="price"><span>Rp. <?= number_format($bs->harga) ?></span></p>
-                            <p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                            <p><a href="<?= base_url(); ?>login" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                         </div>
 
                     </div>
                 </div>
             <?php endforeach; ?>
-        </div> -->
+        </div>
 
     </div>
 </section>

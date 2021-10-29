@@ -16,12 +16,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- <?php foreach ($kumpulanTransaksi as $tr) : ?> -->
+                            <?php foreach ($kumpulanTransaksi as $tr) : ?>
                                 <tr class="text-center">
-                                    <!-- <td><?= date('d F Y', strtotime($tr->tanggal)) ?></td> -->
-                                    <!-- <td>Rp. <?= number_format($tr->grandtotal) ?></td> -->
+                                    <td><?= date('d F Y', strtotime($tr->tanggal)) ?></td>
+                                    <td>Rp. <?= number_format($tr->grandtotal) ?></td>
                                     <td>
-                                        <!-- <?php
+                                        <?php
                                         if ($tr->status == 1) {
                                             echo "Waiting for payment";
                                         } else if ($tr->status == 0) {
@@ -29,22 +29,22 @@
                                         } else {
                                             echo "Wait for confirm";
                                         }
-                                        ?> -->
+                                        ?>
                                     </td>
                                     <td>
-                                        <!-- <?php
+                                        <?php
                                         if ($tr->status != 1) {
                                             echo "none";
                                         } else {
-                                        ?> -->
+                                        ?>
                                             <a href="<?= base_url() . 'user/home/receipt' ?>" class="btn btn-primary btn-outline-primary">
                                                 <i class="fas fa-money-bill-wave-alt"></i>
                                                 <span>Upload Bukti</span>
                                             </a>
-                                        <!-- <?php } ?> -->
+                                        <?php } ?>
                                     </td>
                                 </tr>
-                            <!-- <?php endforeach; ?> -->
+                            <?php endforeach; ?>
                             <!-- END TR-->
 
                         </tbody>

@@ -13,7 +13,7 @@
                   <th>#</th>
                   <th>Tanggal</th>
                   <th>Username</th>
-                  <th>GrandTotal</th>
+                  <th>Total</th>
                   <th>Proses</th>
                 </tr>
               </thead>

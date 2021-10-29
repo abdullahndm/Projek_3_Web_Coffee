@@ -7,7 +7,11 @@ class home_model extends CI_Model
 
     public function getBestSellers()
     {
-        
+        $this->db->select('td.id_produk, sum(td.qty) as jml, p.*');
+        $this->db->join('produk p', 'td.id_produk = p.id_produk');
+        $this->db->group_by('td.id_produk');
+        $this->db->limit(4);
+        return $this->db->get('detail_transaksi td')->result();
     }
 
     public function getUserCart()
@@ -72,7 +76,6 @@ class home_model extends CI_Model
         $this->db->where(array('username' => $data['username'], 'id_produk' => $data['id_produk']));
         $this->db->delete('keranjang');
     }
-
 }
 
 /* End of file home_model.php */

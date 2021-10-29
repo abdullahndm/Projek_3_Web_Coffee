@@ -24,7 +24,7 @@
                                                     <h3><a href="<?= base_url(); ?>home/detail/<?= $kopi['id_produk'] ?>"><?= $kopi['nama'] ?></a></h3>
                                                     <p class="price"><span>Rp. <?= number_format($kopi['harga']) ?></span></p>
                                                     <?php if (empty($this->session->userdata('username'))) : ?>
-                                                        <p><a href="cart.html" onclick="return confirm('Please Login first')" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                                                        <p><a href="<?= base_url(); ?>login" onclick="return confirm('Please Login first')" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                                                     <?php endif ?>
                                                 </div>
                                             </div>
@@ -43,7 +43,7 @@
                                                     <h3><a href="<?= base_url(); ?>home/detail/<?= $tools['id_produk'] ?>"><?= $tools['nama'] ?></a></h3>
                                                     <p class="price"><span>Rp. <?= number_format($tools['harga']) ?></span></p>
                                                     <?php if (empty($this->session->userdata('username'))) : ?>
-                                                        <p><a href="cart.html" onclick="return confirm('Please Login first')" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+                                                        <p><a href="<?= base_url(); ?>login" onclick="return confirm('Please Login first')" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                                                     <?php endif ?>
                                                 </div>
                                             </div>

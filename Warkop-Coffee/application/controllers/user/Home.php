@@ -21,8 +21,8 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Warkop Coffee | Dashboard';
-         $data['bestseller'] = $this->home->getBestSellers();
+        $data['title'] = 'Stars Coffee | Dashboard';
+        $data['bestseller'] = $this->home->getBestSellers();
         $this->load->view('user/template/header', $data);
         $this->load->view('user/template/carousel');
         $this->load->view('user/masuk/home', $data);
@@ -31,10 +31,10 @@ class Home extends CI_Controller
     public function katalog()
     {
         $data['title'] = 'Produk';
-         $data['produkkopi'] = $this->produk->getProdukKopi();
-         $data['produktools'] = $this->produk->getProdukTools();
+        $data['produkkopi'] = $this->produk->getProdukKopi();
+        $data['produktools'] = $this->produk->getProdukTools();
         $this->load->view('user/template/header', $data);
-        $this->load->view('user/template/carousel');
+        // $this->load->view('user/template/carousel');
         $this->load->view('user/masuk/katalog', $data);
         $this->load->view('user/template/footer');
     }
@@ -46,7 +46,7 @@ class Home extends CI_Controller
         );
 
         $this->load->view('user/template/header', $data);
-        //$this->load->view('user/template/carousel');
+        // $this->load->view('user/template/carousel');
         $this->load->view('user/masuk/detail', $data);
         $this->load->view('user/template/footer');
     }
@@ -100,7 +100,7 @@ class Home extends CI_Controller
         );
 
         $this->load->view('user/template/header', $data);
-         $this->load->view('user/template/carousel');
+        // $this->load->view('user/template/carousel');
         $this->load->view('user/masuk/mytrans');
         $this->load->view('user/template/footer');
     }
