@@ -17,7 +17,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Stars Coffee | Dashboard';
+        $data['title'] = 'Warkop Coffee | Dashboard';
         $data['bestseller'] = $this->home->getBestSellers();
         $this->load->view('user/template/headerlogin', $data);
         $this->load->view('user/template/carousel');

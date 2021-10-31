@@ -8,7 +8,10 @@
                         <span class="subheading">Selamat Datang</span>
                         <h1 class="mb-4">Nikmati Harimu dengan Segelas Kopi</h1>
                         <p class="mb-4 mb-md-5">MENU BARU! Dapatkan hanya di website ini</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a></p>
+                        <p>
+                            <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
+                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                        </p>
                     </div>
 
                 </div>
@@ -24,7 +27,10 @@
                         <span class="subheading">Welcome</span>
                         <h1 class="mb-4">Nikmati Kopi &amp; Tempat yang Indah</h1>
                         <p class="mb-4 mb-md-5">Dapatkan Diskon dan Promo dari Pemesanan Website Disini</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a></p>
+                        <p>
+                            <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
+                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                        </p>
                     </div>
 
                 </div>
@@ -40,7 +46,10 @@
                         <span class="subheading">Marhaban</span>
                         <h1 class="mb-4">"Ideologi Negara muncul dari tempat kopi"</h1>
                         <p class="mb-4 mb-md-5">Undang Teman &amp; Keluarga Agar Mendapatkan Diskon</p>
-                        <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a></p>
+                        <p>
+                            <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
+                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                        </p>
                     </div>
 
                 </div>
