@@ -22,7 +22,7 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Stars Coffee | Dashboard';
+        $data['title'] = 'Warkop Coffee | Dashboard';
         $data['bestseller'] = $this->home->getBestSellers();
         $this->load->view('user/template/header', $data);
         $this->load->view('user/template/carousel');
@@ -35,7 +35,6 @@ class Home extends CI_Controller
         $data['produkkopi'] = $this->produk->getProdukKopi();
         $data['produktools'] = $this->produk->getProdukTools();
         $this->load->view('user/template/header', $data);
-        // $this->load->view('user/template/carousel');
         $this->load->view('user/masuk/katalog', $data);
         $this->load->view('user/template/footer');
     }

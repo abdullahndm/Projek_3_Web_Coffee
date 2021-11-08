@@ -24,6 +24,7 @@ class Home extends CI_Controller
         $this->load->view('user/home', $data);
         $this->load->view('user/template/footer');
     }
+   
     public function katalog()
     {
         $data['title'] = 'Produk';

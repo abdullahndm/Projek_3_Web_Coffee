@@ -124,7 +124,7 @@
               <div class="block-38-img">
                 <div class="block-38-header">
                   <img src="ui/images/maya.jpeg" alt="Image placeholder" class="mb-4" width="200">
-                  <h3 class="block-38-heading h4">Waleed Ibn Talal</h3>
+                  <h3 style="color:#000;">Alifia Zaida Nurmaya</h3>
                   <p class="block-38-subheading">Investor</p>
                 </div>
                 <div class="block-38-body">
@@ -138,7 +138,7 @@
               <div class="block-38-img">
                 <div class="block-38-header">
                   <img src="ui/images/faiz.png" alt="Image placeholder" class="mb-4" width="200">
-                  <h3 class="block-38-heading h4">Nur Faizin</h3>
+                  <h3 style="color:#000;">Nur Faizin</h3>
                   <p class="block-38-subheading">Founder</p>
                 </div>
                 <div class="block-38-body">
@@ -155,7 +155,7 @@
               <div class="block-38-img">
                 <div class="block-38-header">
                   <img src="ui/images/abdoel.jpg" alt="Image placeholder" class="mb-4" width = "150">
-                  <h3 class="block-38-heading h4">Abdulloh</h3>
+                  <h3 style="color:#000;">Abdulloh</h3>
                   <p class="block-38-subheading">CEO/Co-Founder</p>
                 </div>
                 <div class="block-38-body">
@@ -170,7 +170,7 @@
               <div class="block-38-img">
                 <div class="block-38-header">
                   <img src="ui/images/kinan.jpeg" alt="Image placeholder" class="mb-4" width="150">
-                  <h3 class="block-38-heading h4">Bagus Satria</h3>
+                  <h3 style="color:#000;">Kinanti Permata Putri</h3>
                   <p class="block-38-subheading">Manager</p>
                 </div>
                 <div class="block-38-body">

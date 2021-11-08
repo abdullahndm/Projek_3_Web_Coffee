@@ -68,8 +68,8 @@ if ('admin' != ($this->session->userdata('level'))) {
             <!-- Main Sidebar Container -->
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
-                <a href="index3.html" class="brand-link">
-                    <span class="brand-text font-weight-light">Stars Coffee</span>
+                <a href="<?= base_url(); ?>admin/home" class="brand-link">
+                    <span class="brand-text font-weight-light">Warkop Coffee</span>
                 </a>
 
                 <!-- Sidebar -->

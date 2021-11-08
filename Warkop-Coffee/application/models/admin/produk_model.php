@@ -22,7 +22,7 @@ class produk_model extends CI_Model
     {
         $this->db->select('p.*,k.kategori');
         $this->db->join('kategori k', 'p.id_kategori = k.id_kategori');
-        $this->db->where('p.id_kategori', '1');
+        $this->db->where('p.id_kategori', '0');
         return $this->db->get('produk p')->result_array();
     }
     public function getProdukTools()
