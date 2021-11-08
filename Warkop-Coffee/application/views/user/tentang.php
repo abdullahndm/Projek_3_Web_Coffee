@@ -34,13 +34,14 @@
         <div class="row">
           <div class="col-lg-7 mx-auto align-self-center">
             <div class=" text-center">
+              <br><br><br><br>
               <h1>Tentang Kami</h1>
               <p>Sejarah kopi konon bermula pada abad ke-9 di Ethiopia. Namun, budidaya dan 
                         perdagangan kopi baru mulai populer pada abad ke-15 oleh pedagang Arab 
                         di Yaman. Kopi mencapai Eropa pada abad ke-17 namun tidak dapat tumbuh baik 
                         di sana. Bangsa-bangsa Eropa lantas menggunakan daerah jajahannya untuk 
                         membudidayakan tanaman kopi. Indonesia, yang diduduki Belanda, memiliki 
-                        andil yang besar dalam sejarah dan persebaran jenis kopi di dunia.</p>ˀ
+                        andil yang besar dalam sejarah dan persebaran jenis kopi di dunia.</p>
             </div>
           </div>
         </div>
