@@ -52,17 +52,13 @@
 
                         <a href="<?= base_url(); ?>user/home/detail/<?= $bs->id_produk ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $bs->img ?>);"></a>
                         <div class="text text-center pt-4">
-                            <h3><a href="<?= base_url(); ?>user/home/detail/<?= $bs->id_produk ?>"><?= $bs->nama ?></a></h3>
-                            <p class="price"><span>Rp. <?= number_format($bs->harga) ?></span></p>
+                            <h3><a href="<?= base_url(); ?>user/home/detail/<?= $bs->id_produk ?>"><?= $bs->nama ?></a></h3>                           
                             <?= form_open('user/home/addToCart') ?>
                             <form action="" method="post">
                                 <input type="hidden" name="id_produk" value="<?= $bs->id_produk ?>">
-                                <button class="btn btn-primary btn-outline-primary" onclick="return confirm('Added to Cart~')">
-                                    <span>Add to Cart</span>
-                                </button>
+                               
                             </form>
-                            <?php form_close() ?>
-                            <p><a href="<?= base_url(); ?>user/home/detail/<?= $bs->id_produk ?>" class="btn btn-primary btn-outline-primary" onclick="return confirm('Added to Cart~')">Add to Cart</a></p>
+                           
                         </div>
 
                     </div>

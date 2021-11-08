@@ -54,8 +54,6 @@
                         <a href="<?= base_url(); ?>home/detail/<?= $bs->id_produk ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $bs->img ?>);"></a>
                         <div class="text text-center pt-4">
                             <h3><a href="#"><?= $bs->nama ?></a></h3>
-                            <p class="price"><span>Rp. <?= number_format($bs->harga) ?></span></p>
-                            <p><a href="<?= base_url(); ?>login" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
                         </div>
 
                     </div>

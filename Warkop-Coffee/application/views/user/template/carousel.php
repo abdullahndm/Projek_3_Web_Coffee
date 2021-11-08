@@ -10,7 +10,7 @@
                         <p class="mb-4 mb-md-5">MENU BARU! Dapatkan hanya di website ini</p>
                         <p>
                             <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
-                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                            <a href="<?= base_url(); ?>tentang" class="btn btn-primary p-3 px-xl-4 py-xl-3">Tentang</a> 
                         </p>
                     </div>
 
@@ -29,7 +29,7 @@
                         <p class="mb-4 mb-md-5">Dapatkan Diskon dan Promo dari Pemesanan Website Disini</p>
                         <p>
                             <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
-                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                            <a href="<?= base_url(); ?>tentang" class="btn btn-primary p-3 px-xl-4 py-xl-3">Tentang</a> 
                         </p>
                     </div>
 
@@ -48,7 +48,7 @@
                         <p class="mb-4 mb-md-5">Undang Teman &amp; Keluarga Agar Mendapatkan Diskon</p>
                         <p>
                             <a href="<?= base_url(); ?>sejarahkopi" class="btn btn-primary p-3 px-xl-4 py-xl-3">Sejarah Kopi</a> 
-                            <a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Tentang</a>
+                            <a href="<?= base_url(); ?>tentang" class="btn btn-primary p-3 px-xl-4 py-xl-3">Tentang</a> 
                         </p>
                     </div>
 
