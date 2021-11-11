@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Okt 2021 pada 08.17
--- Versi server: 10.4.17-MariaDB
--- Versi PHP: 7.4.14
+-- Generation Time: Nov 11, 2021 at 07:52 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `detail_transaksi`
+-- Table structure for table `detail_transaksi`
 --
 
 CREATE TABLE `detail_transaksi` (
@@ -36,16 +36,21 @@ CREATE TABLE `detail_transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `detail_transaksi`
+-- Dumping data for table `detail_transaksi`
 --
 
 INSERT INTO `detail_transaksi` (`id_transaksi`, `id_produk`, `harga`, `qty`, `subtotal`) VALUES
-(2, 2, 14000, 1, 14000);
+(10, 18, 350000, 1, 350000),
+(11, 18, 350000, 1, 350000),
+(12, 18, 350000, 2, 700000),
+(13, 18, 350000, 1, 350000),
+(14, 18, 350000, 2, 700000),
+(15, 14, 20000, 1, 20000);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kategori`
+-- Table structure for table `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -54,17 +59,17 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kategori`
+-- Dumping data for table `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `kategori`) VALUES
-(0, 'eafdfad'),
+(0, 'Tools'),
 (1, 'Coffee');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keranjang`
+-- Table structure for table `keranjang`
 --
 
 CREATE TABLE `keranjang` (
@@ -76,7 +81,7 @@ CREATE TABLE `keranjang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `login`
+-- Table structure for table `login`
 --
 
 CREATE TABLE `login` (
@@ -88,17 +93,18 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `login`
+-- Dumping data for table `login`
 --
 
 INSERT INTO `login` (`username`, `password`, `email`, `nama`, `level`) VALUES
 ('admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@gmail.com', 'admin', 'admin'),
-('faiz', '6f4d045a1249c21f57987fca9c326a84', 'faiz@gmail.com', 'faizin', 'customer');
+('faiz', '6f4d045a1249c21f57987fca9c326a84', 'faiz@gmail.com', 'faizin', 'customer'),
+('maya', 'b2693d9c2124f3ca9547b897794ac6a1', 'maya@gmail.com', 'Maya', 'customer');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengiriman`
+-- Table structure for table `pengiriman`
 --
 
 CREATE TABLE `pengiriman` (
@@ -109,10 +115,22 @@ CREATE TABLE `pengiriman` (
   `nomor` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pengiriman`
+--
+
+INSERT INTO `pengiriman` (`id_kirim`, `id_transaksi`, `nama`, `alamat`, `nomor`) VALUES
+(5, 10, 'eqwe', 'sdfsf', '231321'),
+(6, 11, 'weq', 'ffew', '234'),
+(7, 12, 'hghjg', 'kkgjge', '232432'),
+(8, 13, 'qweqe`', 'werwerw', '3424242'),
+(9, 14, 'daa', 'safa', '2422'),
+(10, 15, 'bvbn', 'AXHCH', '567654');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 CREATE TABLE `produk` (
@@ -123,21 +141,23 @@ CREATE TABLE `produk` (
   `stok` int(11) NOT NULL,
   `deskripsi` text NOT NULL,
   `img` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama`, `harga`, `stok`, `deskripsi`, `img`) VALUES
-(1, 1, 'Cappuccino', 18000, 55, 'Minuman khas Italia yang dibuat dari espresso dan susu', 'cappuccino2.jpg'),
-(2, 1, 'Espresso', 14000, 39, 'Minuman yang dihasilkan dengan mengekstraksi biji kopi yang sudah digiling dengan menyemburkan air panas di bawah tekanan tinggi.', 'espresso1.jpg'),
-(5, 1, 'faiz', 343814093, 3, 'ajfhaknfdafk', 'Capture.PNG');
+(14, 1, 'Cappucino', 20000, 99, 'Cappucino adalah minuman khas Italia yang dibuat dari espreso dan susu', 'as2.jpg'),
+(15, 1, 'wewqe', 2321, 12, 'asndbsamndb', 'gayo_black_tea11.jpg'),
+(16, 1, 'sahdas', 12321, 32, 'wqewqdsa', 'gayo_apple_cider1.jpg'),
+(17, 1, 'mbsamd', 78654, 121, 'adsadasasd', 'halu_pink_banana2.jpg'),
+(18, 0, 'V60 DRIP IN SERVER (VDI-02B)', 350000, 43, 'Server Hario v60 \'Drip In\' menyediakan cara yang nyaman untuk mulai menyeduh kopi di rumah. Terbuat dari kaca borosilikat, teko menggunakan filter Hario (02) dan memiliki kapasitas 700ml, cocok untuk 1 hingga 4 orang. Termasuk dalam kotak adalah 1x 02 Drip Server 1x 02 Dripper Plastik 40 x Filter Kertas Tidak Dikelantang (02)', 'v601.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaksi`
+-- Table structure for table `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -150,113 +170,116 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `transaksi`
+-- Dumping data for table `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `tanggal`, `username`, `grandtotal`, `status`, `struk`) VALUES
-(1, '2021-10-24 14:32:44', 'faiz', 0, 1, ''),
-(2, '2021-10-25 06:15:31', 'faiz', 14000, 1, ''),
-(3, '2021-10-25 06:16:31', 'faiz', 0, 1, '');
+(10, '2021-11-11 06:18:51', 'maya', 350000, 2, '113.PNG'),
+(11, '2021-11-11 06:20:33', 'maya', 350000, 2, 'cad3.jpg'),
+(12, '2021-11-11 06:21:24', 'maya', 700000, 2, 'ao5ddZw_460sv.jpg'),
+(13, '2021-11-11 06:22:06', 'maya', 350000, 2, 'cad4.jpg'),
+(14, '2021-11-11 06:23:01', 'maya', 700000, 2, '114.PNG'),
+(15, '2021-11-11 06:39:43', 'maya', 20000, 2, 'cad5.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `detail_transaksi`
+-- Indexes for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  ADD KEY `id_produk` (`id_produk`),
-  ADD KEY `id_transaksi` (`id_transaksi`);
+  ADD KEY `id_transaksi` (`id_transaksi`),
+  ADD KEY `id_produk` (`id_produk`);
 
 --
--- Indeks untuk tabel `kategori`
+-- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indeks untuk tabel `keranjang`
+-- Indexes for table `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD KEY `username` (`username`),
   ADD KEY `id_produk` (`id_produk`);
 
 --
--- Indeks untuk tabel `login`
+-- Indexes for table `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indeks untuk tabel `pengiriman`
+-- Indexes for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
   ADD PRIMARY KEY (`id_kirim`),
   ADD KEY `id_transaksi` (`id_transaksi`);
 
 --
--- Indeks untuk tabel `produk`
+-- Indexes for table `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`),
   ADD KEY `id_kategori` (`id_kategori`);
 
 --
--- Indeks untuk tabel `transaksi`
+-- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
   ADD KEY `username` (`username`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `produk`
+-- AUTO_INCREMENT for table `pengiriman`
+--
+ALTER TABLE `pengiriman`
+  MODIFY `id_kirim` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT untuk tabel `transaksi`
+-- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `detail_transaksi`
+-- Constraints for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
   ADD CONSTRAINT `detail_transaksi_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaksi`),
   ADD CONSTRAINT `detail_transaksi_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`);
 
 --
--- Ketidakleluasaan untuk tabel `keranjang`
+-- Constraints for table `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD CONSTRAINT `keranjang_ibfk_1` FOREIGN KEY (`username`) REFERENCES `login` (`username`),
   ADD CONSTRAINT `keranjang_ibfk_2` FOREIGN KEY (`id_produk`) REFERENCES `produk` (`id_produk`);
 
 --
--- Ketidakleluasaan untuk tabel `pengiriman`
+-- Constraints for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
   ADD CONSTRAINT `pengiriman_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaksi`);
 
 --
--- Ketidakleluasaan untuk tabel `produk`
---
-ALTER TABLE `produk`
-  ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);
-
---
--- Ketidakleluasaan untuk tabel `transaksi`
+-- Constraints for table `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`username`) REFERENCES `login` (`username`);
