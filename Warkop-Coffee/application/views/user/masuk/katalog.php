@@ -7,7 +7,7 @@
                         <div class="nav ftco-animate nav-pills justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             <a class="nav-link" id="v-pills-0-tab" data-toggle="pill" href="#v-pills-0" role="tab" aria-controls="v-pills-0" aria-selected="true">Coffee</a>
 
-                            <a class="nav-link" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="false">Tools</a>
+                                <a class="nav-link" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="false">Tools</a>
                         </div>
                     </div>
                     <div class="col-md-12 d-flex align-items-center">
@@ -19,19 +19,33 @@
                                     <?php foreach ($produkkopi as $kopi) : ?>
                                         <div class="col-md-3">
                                             <div class="menu-entry">
-                                                <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a>
-                                                <div class="text text-center pt-4">
-                                                    <h3><a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>"><?= $kopi['nama'] ?></a></h3>
-                                                    <p class="price"><span>Rp. <?= number_format($kopi['harga']) ?></span></p>
-                                                    <?= form_open('user/home/addToCart') ?>
-                                                    <form action="" method="post">
-                                                        <input type="hidden" name="id_produk" value="<?= $kopi['id_produk'] ?>">
-                                                        <button class="btn btn-primary btn-outline-primary" onclick="return confirm('Added to Cart~')">
-                                                            <span>Add to Cart</span>
-                                                        </button>
-                                                    </form>
-                                                    <?php form_close() ?>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <!-- Image -->
+                                                        <!-- <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a> -->
+                                                        <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" >
+                                                            <img style="width:250px;height:200px;" src="<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>" alt="">
+                                                        </a>
+                                                    </div>
                                                 </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="text text-center pt-4">
+                                                            <h3><a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>"><?= $kopi['nama'] ?></a></h3>
+                                                            <p class="price"><span>Rp. <?= number_format($kopi['harga']) ?></span></p>
+                                                            <?= form_open('user/home/addToCart') ?>
+                                                            <form action="" method="post">
+                                                                <input type="hidden" name="id_produk" value="<?= $kopi['id_produk'] ?>">
+                                                                <button class="btn btn-primary btn-outline-primary" onclick="return confirm('Added to Cart~')">
+                                                                    <span>Add to Cart</span>
+                                                                </button>
+                                                            </form>
+                                                            <?php form_close() ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     <?php endforeach; ?>
@@ -43,7 +57,17 @@
                                     <?php foreach ($produktools as $kopi) : ?>
                                         <div class="col-md-3">
                                             <div class="menu-entry">
-                                                <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a>
+                                                <div cLass="row">
+                                                    <div class ="col">
+                                                <!-- <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a> -->
+                                                <a href="<?= base_url(); ?>user/home/detail<?= $kopi['id_produk'] ?>">
+                                                <img style="width:250px;height:200px;" src="<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>" alt="">
+                                                </a>
+                                         </div>
+                                    </div>
+                                    
+                                    <div calss="row">
+                                        <div class="col">
                                                 <div class="text text-center pt-4">
                                                     <h3><a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>"><?= $kopi['nama'] ?></a></h3>
                                                     <p class="price"><span>Rp. <?= number_format($kopi['harga']) ?></span></p>
@@ -58,13 +82,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    </div>
                                     <?php endforeach; ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        
+                             </div>
+                         </div>
 </section>

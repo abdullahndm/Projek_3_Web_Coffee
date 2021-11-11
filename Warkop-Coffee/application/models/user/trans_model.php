@@ -20,7 +20,7 @@ class trans_model extends CI_Model
 
     public function insertTransDetail()
     {
-        $data = array(
+        $data = array(  
             'username' => $this->session->userdata('username'),
             'status' => 1,
         );

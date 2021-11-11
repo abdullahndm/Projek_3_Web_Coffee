@@ -92,7 +92,7 @@
             <div class="text">
               <h2>Tukar Tanpa Biaya</h2>
               <p>Jika Anda tidak puas dengan produk yang Anda terima, Warkop.com menerima pengajuan 
-                pengembaliaan produk yang sudah dibeli di ApotekFAB.com dengan persyaratan tertentu</p>
+                pengembaliaan produk yang sudah dibeli di warkop.com dengan persyaratan tertentu</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
