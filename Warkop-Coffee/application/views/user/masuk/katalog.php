@@ -21,11 +21,7 @@
                                             <div class="menu-entry">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <!-- Image -->
-                                                        <!-- <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a> -->
-                                                        <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" >
-                                                            <img style="width:250px;height:200px;" src="<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>" alt="">
-                                                        </a>
+                                                        <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a>
                                                     </div>
                                                 </div>
 
@@ -59,10 +55,7 @@
                                             <div class="menu-entry">
                                                 <div cLass="row">
                                                     <div class ="col">
-                                                <!-- <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a> -->
-                                                <a href="<?= base_url(); ?>user/home/detail<?= $kopi['id_produk'] ?>">
-                                                <img style="width:250px;height:200px;" src="<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>" alt="">
-                                                </a>
+                                                <a href="<?= base_url(); ?>user/home/detail/<?= $kopi['id_produk'] ?>" class="img" style="background-image: url(<?= base_url() . 'uploads/produk/' . $kopi['img'] ?>);"></a>
                                          </div>
                                     </div>
                                     

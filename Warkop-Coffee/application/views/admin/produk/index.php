@@ -20,7 +20,7 @@
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>ID Produk</th>
+                  <!-- <th>ID Produk</th> -->
                   <th>Kategori</th>
                   <th>Nama Produk</th>
                   <th>Harga</th>
@@ -31,7 +31,7 @@
               <tbody>
                 <?php foreach ($produk as $prd) : ?>
                   <tr>
-                    <td><?= $prd['id_produk'] ?></td>
+                    <!-- <td><?= $prd['id_produk'] ?></td> -->
                     <td><?= $prd['kategori'] ?></td>
                     <td><?= $prd['nama'] ?></td>
                     <td>Rp. <?= number_format($prd['harga']) ?></td>
